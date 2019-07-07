@@ -1,6 +1,7 @@
-package com.example.rabbitmq;
+package com.example.rabbitmq_consumer;
 
-import com.example.rabbitmq.bean.Sender;
+import com.example.rabbitmq_provider.RabbitmqApplication;
+import com.example.rabbitmq_provider.bean.Sender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class QueueTest {
     public void test() throws Exception{
         while (true){
             Thread.sleep(1000);
-            this.sender.send("hello rabbitmq");
+            this.sender.send("hello rabbitmq_consumer");
         }
 
     }
